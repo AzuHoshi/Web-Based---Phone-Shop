@@ -68,6 +68,7 @@ $cart_count = get_cart_count();
             <a href="orders_admin.php" class="btn btn-s">Orders Admin</a>
             <a href="stock_alert.php" class="btn btn-s">Stock Alert</a>
             <a href="cart.php" class="btn btn-s">🛒 Cart (<?= $cart_count ?>)</a>
+            <a href="profile.php" class="btn btn-s">👤 My Profile</a>
             <a href="logout.php" class="btn btn-s">Logout</a>
         </div>
     </div>

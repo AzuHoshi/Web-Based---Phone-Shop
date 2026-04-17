@@ -112,7 +112,8 @@ $cart_count = get_cart_count();
     <a href="stock_alert.php" class="btn btn-s">Stock Alert</a>
     <a href="users.php" class="btn btn-s">Users</a>
     <a href="cart.php" class="btn btn-s">🛒 Cart (<?= $cart_count ?>)</a>
-    <a href="logout.php" class="btn btn-s">Logout</a>
+    <a href="profile.php" class="btn btn-s">👤 My Profile</a>
+    <a href="logout.php" class="btn btn-s">Logout (<?= h($_SESSION['user_name'] ?? '') ?>)</a>
 </div>
     </div>
     

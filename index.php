@@ -36,6 +36,7 @@ $wishlist_count = isset($_SESSION['user_id']) ? getWishlistCount($_SESSION['user
             <a href="wishlist.php" class="btn btn-s">❤️ Wishlist (<?= $wishlist_count ?>)</a>
             <a href="cart.php" class="btn btn-s">🛒 Cart (<?= $cart_count ?>)</a>
             <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="profile.php" class="btn btn-s">👤 My Profile</a>
                 <a href="logout.php" class="btn btn-s">Logout (<?= h($_SESSION['user_name'] ?? '') ?>)</a>
             <?php else: ?>
                 <a href="login.php" class="btn btn-s">Login</a>

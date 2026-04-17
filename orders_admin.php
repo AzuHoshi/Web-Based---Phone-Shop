@@ -39,6 +39,7 @@ if (is_post() && post('action') == 'update') {
     <a href="stock_alert.php" class="btn btn-s">Stock Alert</a>
     <a href="users.php" class="btn btn-s">Users</a>
     <a href="cart.php" class="btn btn-s">🛒 Cart</a>
+    <a href="profile.php" class="btn btn-s">👤 My Profile</a>
     <a href="logout.php" class="btn btn-s">Logout</a>
 </div>
     </div>

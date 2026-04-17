@@ -27,10 +27,11 @@ function get_file($k) { $f=$_FILES[$k]??null; return ($f && $f['error']==0) ? (o
 
 // 上传图片到 image 文件夹
 function uploadImage($f) {
-    if (!$f || $f['error'] != 0) return null;
+    // changed [] to ->
+    if (!$f || $f->error != 0) return null; 
     $ext = strtolower(pathinfo($f->name, PATHINFO_EXTENSION));
     if (!in_array($ext, ['jpg','jpeg','png','gif','webp'])) return null;
-    if ($f['size'] > 2 * 1024 * 1024) return null;
+    if ($f->size > 2 * 1024 * 1024) return null; 
     if (!file_exists('image/')) mkdir('image/', 0777, true);
     $name = uniqid() . '.' . $ext;
     move_uploaded_file($f->tmp_name, 'image/' . $name);
