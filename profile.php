@@ -55,7 +55,7 @@ $wishlist_count = getWishlistCount($user_id);
 
             <h3><?= htmlspecialchars($user->name) ?></h3>
             <p>Email: <?= htmlspecialchars($user->email) ?></p>
-            <p>Member since: <?= htmlspecialchars(ucfirst($user->created_at)) ?></p>
+            <p>Registered since: <?= htmlspecialchars(ucfirst($user->created_at)) ?></p>
             
             <br><br>
             <a href="profile_update.php" class="btn btn-p">Edit Profile</a>

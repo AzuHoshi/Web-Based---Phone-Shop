@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2026 at 05:19 AM
+-- Generation Time: Apr 17, 2026 at 11:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -180,20 +180,21 @@ CREATE TABLE `users` (
   `login_attempts` int(11) DEFAULT 0,
   `locked_until` datetime DEFAULT NULL,
   `is_blocked` tinyint(1) DEFAULT 0,
-  `created_at` datetime DEFAULT current_timestamp()
+  `created_at` datetime DEFAULT current_timestamp(),
+  `profile_photo` varchar(255) NOT NULL DEFAULT 'default_avatar.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `security_question`, `security_answer`, `role`, `login_attempts`, `locked_until`, `is_blocked`, `created_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', NULL, NULL, 'admin', 0, NULL, 0, '2026-04-15 16:46:08'),
-(2, 'John Doe', 'john@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', NULL, NULL, 'member', 0, NULL, 0, '2026-04-15 16:46:08'),
-(3, 'Jason', 'jason@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', NULL, NULL, 'member', 1, NULL, 0, '2026-04-17 01:55:17'),
-(4, 'alex', 'alex@gmail.com', 'd5f12e53a182c062b6bf30c1445153faff12269a', NULL, NULL, 'member', 0, NULL, 0, '2026-04-17 03:52:04'),
-(5, 'kenneth', 'kenneth@gmail.com', '7d695548f82a9589a5b09da95040ad6930ce8b86', NULL, NULL, 'member', 0, NULL, 0, '2026-04-17 04:06:58'),
-(6, 'ali', 'ali@gmail.com', '4c1b52409cf6be3896cf163fa17b32e4da293f2e', 'What is your favorite food?', 'nasi lemak', 'member', 0, NULL, 0, '2026-04-17 11:17:29');
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `security_question`, `security_answer`, `role`, `login_attempts`, `locked_until`, `is_blocked`, `created_at`, `profile_photo`) VALUES
+(1, 'Admin', 'admin@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', NULL, NULL, 'admin', 0, NULL, 0, '2026-04-15 16:46:08', ''),
+(2, 'John Doe', 'john@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', NULL, NULL, 'member', 0, NULL, 0, '2026-04-15 16:46:08', ''),
+(3, 'Jason', 'jason@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', NULL, NULL, 'member', 1, NULL, 0, '2026-04-17 01:55:17', 'default_avatar.png'),
+(4, 'alex', 'alex@gmail.com', 'd5f12e53a182c062b6bf30c1445153faff12269a', NULL, NULL, 'member', 0, NULL, 0, '2026-04-17 03:52:04', 'default_avatar.png'),
+(5, 'kenneth', 'kenneth@gmail.com', '7d695548f82a9589a5b09da95040ad6930ce8b86', NULL, NULL, 'member', 0, NULL, 0, '2026-04-17 04:06:58', 'default_avatar.png'),
+(6, 'ali', 'ali@gmail.com', '4c1b52409cf6be3896cf163fa17b32e4da293f2e', 'What is your favorite food?', 'nasi lemak', 'member', 0, NULL, 0, '2026-04-17 11:17:29', 'default_avatar.png');
 
 -- --------------------------------------------------------
 
